@@ -84,7 +84,7 @@ class ComponentAvatar extends Component
 	 * @return Imagick|null The avatar, or nothing.
 	 */
 	private function getAvatar($user) {
-		$avatarURL = self::AVATAR_URL . urlencode($user['user_id']) . '_' . urlencode(time()) . '.png';
+		$avatarURL = self::AVATAR_URL . urlencode($user['user_id']) . '.jpg';
 
 		$avatar = new Imagick();
 		$cachedPicture = $this->mc->get("osusigv3_avatar_" . $user['user_id']);
@@ -94,27 +94,28 @@ class ComponentAvatar extends Component
 
 			if ($avatarBlob === false) {
 				$avatar->newImage(128, 128, new ImagickPixel("#f8f8f8"));
-				$avatar->setImageFormat('png');
+				$avatar->setImageFormat('jpg');
 			}
 
 			$matches = array();
 			preg_match('#HTTP/\d+\.\d+ (\d+)#', $http_response_header[0], $matches);
+			preg_match('#HTTP/\d+\.\d+ (\d+)#', $http_response_header[0], $matches);
 
 			if ($matches[1] == 200) {
 				$avatar->readImageBlob($avatarBlob);
-				$avatar->setImageFormat('png');
+				$avatar->setImageFormat('jpg');
 
 				if (isset($_GET['opaqueavatar'])) {
 					$avatarTemp = new Imagick();
 					$avatarTemp->newImage($avatar->getImageWidth(), $avatar->getImageHeight(), new ImagickPixel('#ffffff'));
-					$avatarTemp->setImageFormat('png');
+					$avatarTemp->setImageFormat('jpg');
 
 					$avatarTemp->compositeImage($avatar, Imagick::COMPOSITE_DEFAULT, 0, 0);
 					$avatar = $avatarTemp;
 				}
 			} else {
 				$avatar->newImage(128, 128, new ImagickPixel("#f8f8f8"));
-				$avatar->setImageFormat('png');
+				$avatar->setImageFormat('jpg');
 			}
 
 			$this->mc->set("osusigv3_avatar_" . $user['user_id'], base64_encode($avatar->getImageBlob()), 43200);
@@ -123,7 +124,7 @@ class ComponentAvatar extends Component
 		} else {
 			$decodedPicture = base64_decode($cachedPicture);
 			$avatar->readImageBlob($decodedPicture);
-			$avatar->setImageFormat('png');
+			$avatar->setImageFormat('jpg');
 
 			return $avatar;
 		}
@@ -174,7 +175,7 @@ class ComponentAvatar extends Component
 			);
 
 			$roundImage->drawImage($roundMask);
-			$roundImage->setImageFormat('png');
+			$roundImage->setImageFormat('jpg');
 
 			$avatar->compositeImage(
 				$roundImage,

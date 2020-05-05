@@ -10,7 +10,7 @@
         <meta charset='UTF-8'>
         <meta name='keywords' content='osu, next, signature, generator, forum, sig'>
         <meta name='description' content='一个 osu!next 风格的签名生成器！'>
-        <meta name='author' content='Lemmmy / JindaiKirin'>
+        <meta name='author' content='Lemmmy / JindaiKirin / MoeKotoki'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#bb1177">
         <meta name='handheldfriendly' content='true'>
@@ -24,7 +24,8 @@
     <body>
         <div class="page-header">
             <span class="title">osu!next 签名生成器</span><br>
-            <span class="shameless-self-promotion">原作 by <a href="https://github.com/Lemmmy/osusig" target="_blank">Lemmmy</a> - 获取源代码请点击<a href="https://github.com/Tsuk1ko/osusig" target="_blank">这里</a> - 汉化&amp;修正 by <a href="https://moe.best" target="_blank">神代绮凛</a></span>
+            <span class="shameless-self-promotion">原作 by <a href="https://github.com/Lemmmy/osusig" target="_blank">Lemmmy</a> - 汉化&amp;修正 by <a href="https://moe.best" target="_blank">神代绮凛</a> - 私服兼容 by <a href="https://tokitori.top" target="_blank">Kotoki1337</a></span>
+            <span class="shameless-self-promotion">View source code on <b><a href="https://github.com/Kotoki1337/osusig" target="_blank">Github</a></b></span>
         </div>
         <header>选择你的服务器</header>
         <article>
