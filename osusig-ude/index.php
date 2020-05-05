@@ -65,10 +65,10 @@
     <br><br>
     <label for="mode">Mode</label>
     <ul class="modes">
-        <li class="osu selected" id="mode-osu"><img src="img/osu.png"><span>戳饼</span></li>
-        <li class="taiko" id="mode-taiko"><img src="img/taiko.png"><span>敲鼓</span></li>
-        <li class="ctb" id="mode-ctb"><img src="img/ctb.png"><span>接果</span></li>
-        <li class="mania" id="mode-mania"><img src="img/mania.png"><span>弹琴</span></li>
+        <li class="osu selected" id="mode-osu"><img src="img/osu.png"><span>Atandard</span></li>
+        <li class="taiko" id="mode-taiko"><img src="img/taiko.png"><span>Taiko</span></li>
+        <li class="ctb" id="mode-ctb"><img src="img/ctb.png"><span>Catch The Beat</span></li>
+        <li class="mania" id="mode-mania"><img src="img/mania.png"><span>Mania</span></li>
     </ul>
     <br><br>
     <label for="ppmode">PP 显示</label>
