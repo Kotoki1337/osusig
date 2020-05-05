@@ -1,5 +1,5 @@
 $(function() {
-    var colour = "yellow";
+    var colour = "pink";
     var mode = 0;
     var ppmode = -1;
 
@@ -12,7 +12,7 @@ $(function() {
             var url = "sig.php?";
 
             url += "colour=" + colour.replace('#', "hex");
-            url += "&uname=" + encodeURIComponent(($("input[name=uname]").val() || "Mashir0"));
+            url += "&uname=" + encodeURIComponent(($("input[name=uname]").val() || "Kotoki 1 3 3 7"));
             if(mode > 0) url += "&mode=" + mode;
             url += (ppmode >= 0 ? "&pp=" + ppmode : "");
 
